@@ -1,0 +1,19 @@
+package model;
+
+import com.google.gson.annotations.SerializedName;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.util.Map;
+
+
+@Data
+@AllArgsConstructor
+public class Currency {
+    @SerializedName("base_code")
+   private String currencyName;
+    @SerializedName("conversion_rates")
+   private Map<String, Double >conversionRates;
+
+
+}

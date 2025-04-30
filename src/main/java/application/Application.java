@@ -4,10 +4,11 @@ package application;
 import converter.Converter;
 import messages.Messages;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         int optionClient;
 
         Scanner scan = new Scanner(System.in);
