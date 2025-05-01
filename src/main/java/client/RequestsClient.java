@@ -20,9 +20,9 @@ public class RequestsClient {
      //String foreignExchange;
      String fixedCurrency;
 
-    public CurrencyDto requests(String fixedCurrency) throws IOException, InterruptedException {
+    public Currency requests(String fixedCurrency) throws IOException, InterruptedException {
         //asigno la url a una variable para mejor utilizacion en el codigo
-        String url = "https://v6.exchangerate-api.com/v6/f42a6864c3b7c278260fec2f/latest/"+ fixedCurrency;
+        String url = "https://v6.exchangerate-api.com/v6/f42a6864c3b7c278260fec2f/latest/" + fixedCurrency;
 
         //aca se crea un nuevo cliente para empezar a hacer peticiones a la api
         HttpClient client = HttpClient.newHttpClient();
@@ -49,11 +49,10 @@ public class RequestsClient {
 
         //esta asignacion de variable tipo CurrencyDto me ayuda a mandar los datos a mi clase dto y ella se conecta con mi clase
         // model para asignarselos a las propiedades de esa clase model
-        CurrencyDto currencyDto = gson.fromJson(json, CurrencyDto.class);
+        Currency currency = gson.fromJson(json, Currency.class);
+        System.out.println(currency);
 
-        return currencyDto;
-
+        return currency;
     }
-
 
 }

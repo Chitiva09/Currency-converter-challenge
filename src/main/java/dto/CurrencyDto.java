@@ -2,9 +2,16 @@ package dto;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Map;
 
+
 public record CurrencyDto(
-        @SerializedName("base_code") String baseCode,
-        @SerializedName("conversion_rates") Map<String, Double> conversionRates
+        @Setter
+        @Getter
+        String baseCode,
+
+         Map<String, Double> conversionRates
 ) {}

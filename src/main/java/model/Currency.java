@@ -10,10 +10,10 @@ import java.util.Map;
 @Data
 @AllArgsConstructor
 public class Currency {
-    @SerializedName("base_code")
-   private String currencyName;
-    @SerializedName("conversion_rates")
-   private Map<String, Double >conversionRates;
 
+    @SerializedName("base_code")
+    public String currencyName;
+    @SerializedName("conversion_rates")
+    public Map<String, Double >conversionRates;
 
 }
