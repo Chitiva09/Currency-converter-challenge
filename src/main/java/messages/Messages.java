@@ -17,12 +17,25 @@ public class Messages {
         System.out.println();
     }
     public void goOutMessage(){
-        System.out.println("gracias por usar nuestro conversor de monedas");
+        System.out.println("Gracias por usar nuestro conversor de monedas");
         System.out.println();
-        System.out.println("hasta la proxima");
+        System.out.println("Hasta la proxima");
     }
     public void amountMessage(){
-        System.out.println("ingrese el valor que desa convertir");
+        System.out.println("Ingrese el valor que desea convertir");
 
+    }
+
+    public void numberIntroductionErrorMessage(){
+        System.out.println("Debe ingresar un numero valido. Intenta de nuevo");
+        System.out.println();
+    }
+
+    public void numberCaseIncorrectError(){
+        System.out.println("Usted ha ingresado un numero incorrecto");
+        System.out.println();
+        System.out.println("Por favor elija un numero entre 1 y 7");
+        System.out.println();
+        System.out.println("Gracias");
     }
 }

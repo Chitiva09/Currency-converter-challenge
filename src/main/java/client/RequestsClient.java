@@ -42,7 +42,7 @@ public class RequestsClient {
         String json = response.body();
 
         //este sout solo es para guia
-        System.out.println(json);
+        //System.out.println(json);
 
         //se crea una instancia de Gson para poder manipular el json
         Gson gson = new Gson();
