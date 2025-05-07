@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) throws IOException, InterruptedException {
-        int optionClient = Integer.parseInt(null);
+
+        int optionClient = 0;
 
         Scanner scan = new Scanner(System.in);
         // instancio la clase Message para poder traer los metodos que se encuentran en ella
@@ -18,12 +19,13 @@ public class Application {
         Converter converter = new Converter();
 
         //aca hago llamado al metodo que se encuentra en la clase Message
-        messages.introductionMessage();
+        messages.welcomeMessage();
 
 
-        while (optionClient == 7) {
+        while (optionClient!=7) {
+            messages.introductionMessage();
 
-            // aqui valido que no introduzcan cadenas en la variable que elige la opcion en el switch
+            // aquí valido que no introduzcan cadenas en la variable que elige la opcion en el switch
             while (!scan.hasNextInt()) {
                 messages.numberIntroductionErrorMessage();
                 scan.next(); // descartamos la entrada inválida
@@ -39,6 +41,7 @@ public class Application {
                     // dolar a peso argentino
                     case 1:
                         converter.usdXArs();
+
                         break;
                     //peso argentino a dolar
                     case 2:
@@ -47,6 +50,7 @@ public class Application {
                     //dolar a real brasileño
                     case 3:
                         converter.usdXBrl();
+
                         break;
                     //real brasileño a dolar
                     case 4:
@@ -65,6 +69,8 @@ public class Application {
                         messages.goOutMessage();
                         break;
                 }
+            }else {
+                messages.numberCaseIncorrectError();
             }
         }
     }

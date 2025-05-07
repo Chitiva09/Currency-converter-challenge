@@ -1,7 +1,6 @@
 package client;
 
 import com.google.gson.Gson;
-import dto.CurrencyDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import model.Currency;
@@ -50,7 +49,7 @@ public class RequestsClient {
         //esta asignacion de variable tipo CurrencyDto me ayuda a mandar los datos a mi clase dto y ella se conecta con mi clase
         // model para asignarselos a las propiedades de esa clase model
         Currency currency = gson.fromJson(json, Currency.class);
-        System.out.println(currency);
+        //System.out.println(currency);
 
         return currency;
     }

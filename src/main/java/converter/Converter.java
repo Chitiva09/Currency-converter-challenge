@@ -5,7 +5,6 @@ import messages.Messages;
 import model.Currency;
 
 import java.io.IOException;
-import java.util.Currency;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -38,7 +37,7 @@ public class Converter {
 
     }
 
-    public void arsXUsd(){
+    public void arsXUsd() throws IOException, InterruptedException {
         messages.amountMessage();
         amount = scan.nextDouble();
         Currency currency = requestsClient.requests("ARS");
@@ -48,9 +47,8 @@ public class Converter {
             total= amount*change;
             System.out.println("El valor "+ amount + " [ARS] corresponde al valor final de "+ total + "[USD]");
         }
-
     }
-    public void usdXBrl(){
+    public void usdXBrl() throws IOException, InterruptedException {
         messages.amountMessage();
         amount = scan.nextDouble();
         Currency currency = requestsClient.requests("USD");
@@ -61,7 +59,7 @@ public class Converter {
             System.out.println("El valor "+ amount + " [USD] corresponde al valor final de "+ total + "[BRL]");
         }
     }
-    public void brlXUsd(){
+    public void brlXUsd() throws IOException, InterruptedException {
         messages.amountMessage();
         amount = scan.nextDouble();
         Currency currency = requestsClient.requests("BRL");
@@ -72,7 +70,7 @@ public class Converter {
             System.out.println("El valor "+ amount + " [BRL] corresponde al valor final de "+ total + "[USD]");
         }
     }
-    public void usdXCop(){
+    public void usdXCop() throws IOException, InterruptedException {
         messages.amountMessage();
         amount = scan.nextDouble();
         Currency currency = requestsClient.requests("USD");
@@ -83,7 +81,7 @@ public class Converter {
             System.out.println("El valor "+ amount + " [USD] corresponde al valor final de "+ total + "[COP]");
         }
     }
-    public void copXUsd(){
+    public void copXUsd() throws IOException, InterruptedException {
         messages.amountMessage();
         amount = scan.nextDouble();
         Currency currency = requestsClient.requests("COP");
